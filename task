@@ -1,0 +1,7 @@
+cd /home/chengjie/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/impl_1
+
+exec echo -n "all:{ red_pitaya_top.bit}" > red_pitaya_top.bif
+
+exec bootgen -image red_pitaya_top.bif -arch zynq -process_bitstream bin -o red_pitaya_top.bit.bin -w
+
+scp red_pitaya_top.bit.bin root@192.168.31.92:/root
